@@ -7,9 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SearchBar from '@/components/SearchBar';
 
-export const metadata = {
-  title: 'Items'
-}
+
 const page = () => {
     const {data: session} = useSession();
     const [tableData, setTableData] = useState([]);
