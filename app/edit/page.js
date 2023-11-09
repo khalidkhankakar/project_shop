@@ -5,9 +5,7 @@ import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter, useSearchParams } from 'next/navigation'
-export const metadata = {
-  title: 'Edit items'
-}
+
 function Edit() {
     const para = useSearchParams();
     const router = useRouter();
