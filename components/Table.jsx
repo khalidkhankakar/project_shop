@@ -25,7 +25,10 @@ const Table = () => {
                 
                 setLoader(false)
             }
-
+    useEffect(()=>{
+fetchingData();
+          },[])
+    
 if(session && callfunc){
     fetchingData();
     setCallfunc(false)
