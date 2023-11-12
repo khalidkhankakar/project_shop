@@ -18,7 +18,7 @@ const page = () => {
 
             const fetchingData = async ()=>{
               setLoader(true)
-                const resp = await fetch(`/api/getproduct/dd?mail=${session?.user?.email}`)
+                const resp = await fetch(`https://project-shop-gamma.vercel.app/api/getproduct/dd?mail=${session?.user?.email}`)
                 const parseResp = await resp.json()
                 console.log(session?.user?.email)
                 setTableData(parseResp.products)
