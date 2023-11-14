@@ -21,8 +21,12 @@ const Table = () => {
               setLoader(true)
                 const resp = await fetch(`${apiUrl}/api/getproduct/dd?mail=${session?.user?.email}`)
                 const parseResp = await resp.json()
-                console.log(session?.user?.email)
-                setTableData(parseResp.products)
+    if (!resp.ok) {
+      throw new Error(`Failed to fetch data: ${resp.status} - ${resp.statusText}`);
+    }
+    const parseResp = await resp.json();
+    console.log('Fetched data:', parseResp);
+    setTableData(parseResp.products);
                 
                 setLoader(false)
             }
