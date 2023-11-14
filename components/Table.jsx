@@ -14,11 +14,12 @@ const Table = () => {
     const [callfunc, setCallfunc] = useState(true)
     const [truenotification, setTruenotification] = useState(false);
     const [loader, setLoader] = useState(false);
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
     
 
             const fetchingData = async ()=>{
               setLoader(true)
-                const resp = await fetch(`/api/getproduct/dd?mail=${session?.user?.email}`)
+                const resp = await fetch(`${apiUrl}/api/getproduct/dd?mail=${session?.user?.email}`)
                 const parseResp = await resp.json()
                 console.log(session?.user?.email)
                 setTableData(parseResp.products)
