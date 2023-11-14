@@ -20,7 +20,6 @@ const Table = () => {
             const fetchingData = async ()=>{
               setLoader(true)
                 const resp = await fetch(`${apiUrl}/api/getproduct/dd?mail=${session?.user?.email}`)
-                const parseResp = await resp.json()
     if (!resp.ok) {
       throw new Error(`Failed to fetch data: ${resp.status} - ${resp.statusText}`);
     }
