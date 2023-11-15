@@ -17,7 +17,7 @@ const SearchBar = () => {
   
   return (
 
-<div className='container m-auto my-3'>
+<div className='container m-auto w-[90vw] my-3'>
 
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative">
